@@ -5,7 +5,7 @@ Summary:	Python development environment for Eclipse
 Summary(pl):	¦rodowisko programistyczne Pythona dla Eclipse
 Name:		eclipse-%{module}
 Version:	%{_ver}
-Release:	0.1
+Release:	0.2
 License:	CPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/pydev/%{module}_%{_src_ver}.zip
@@ -26,7 +26,7 @@ i odpluskwiania skryptów Pythona.
 
 %prep
 %setup -q -c -T
-unzip %{SOURCE0}
+unzip %{SOURCE0} -x *.db
 
 %install
 rm -rf $RPM_BUILD_ROOT
