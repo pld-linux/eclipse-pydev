@@ -1,15 +1,15 @@
 %define		module	pydev
-%define		_ver	0.9.0
+%define		_ver	0.9.2
 %define		_src_ver	%(echo %{_ver}|tr . _)
 Summary:	Python development environment for Eclipse
 Summary(pl):	¦rodowisko programistyczne Pythona dla Eclipse
 Name:		eclipse-%{module}
 Version:	%{_ver}
-Release:	0.2
+Release:	1
 License:	CPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/pydev/%{module}_%{_src_ver}.zip
-# Source0-md5:	0e7033161c79901ca9acdd19c4c8635f
+# Source0-md5:	d887a9cc74a8db0c26219698c6128c52
 URL:		http://pydev.sourceforge.net/
 BuildRequires:	unzip
 Requires:	eclipse >= 3.0
