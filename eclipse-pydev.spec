@@ -1,19 +1,18 @@
 %define		module	pydev
-%define		_ver	0.9.5
+%define		_ver	0.9.7
 %define		_src_ver	%(echo %{_ver}|tr . _)
 Summary:	Python development environment for Eclipse
 Summary(pl):	¦rodowisko programistyczne Pythona dla Eclipse
 Name:		eclipse-%{module}
 Version:	%{_ver}
-Release:	0.3
+Release:	1
 License:	CPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/pydev/%{module}_%{_src_ver}.zip
-# Source0-md5:	b5bac4248f33ada1d8dc05db4f06a3b2
+# Source0-md5:	963197aa44aa44e8c376546ff15b1a74
 URL:		http://pydev.sourceforge.net/
 BuildRequires:	unzip
-Requires:	eclipse >= 3.0
-Requires:	eclipse < 3.1-1
+Requires:	eclipse >= 3.1
 Requires:	python
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,26 +33,17 @@ unzip -qq %{SOURCE0} -x *.db
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/eclipse/{features,plugins}
-cp -rf eclipse/features/* $RPM_BUILD_ROOT%{_libdir}/eclipse/features
-cp -rf eclipse/plugins/* $RPM_BUILD_ROOT%{_libdir}/eclipse/plugins
-
-# on future
-#install -d $RPM_BUILD_ROOT%{_eclipsedir}/{features,plugins}
-#cp -rf eclipse/features/* $RPM_BUILD_ROOT%{_eclipsedir}/features
-#cp -rf eclipse/plugins/* $RPM_BUILD_ROOT%{_eclipsedir}/plugins
-
+install -d $RPM_BUILD_ROOT%{_eclipsedir}/{features,plugins}
+cp -rf features/* $RPM_BUILD_ROOT%{_eclipsedir}/features
+cp -rf plugins/* $RPM_BUILD_ROOT%{_eclipsedir}/plugins
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_libdir}/eclipse/features/org.python.pydev*
-%{_libdir}/eclipse/plugins/org.python.pydev*
-# on future
-#%{_eclipsedir}/features/org.python.pydev*
-#%{_eclipsedir}/plugins/org.python.pydev*
+%{_eclipsedir}/features/org.python.pydev*
+%{_eclipsedir}/plugins/org.python.pydev*
 
 %triggerpostun -- %{name} > 0.9.5-0.3
 %banner %{name} -e << EOF
