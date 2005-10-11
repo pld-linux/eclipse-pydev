@@ -1,5 +1,6 @@
 %define		module	pydev
-%define		_ver	0.9.7
+%define		_ver	 0.9.8.2
+%define		_src_name	org.python.pydev.feature
 %define		_src_ver	%(echo %{_ver}|tr . _)
 Summary:	Python development environment for Eclipse
 Summary(pl):	¦rodowisko programistyczne Pythona dla Eclipse
@@ -8,9 +9,10 @@ Version:	%{_ver}
 Release:	1
 License:	CPL
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/pydev/%{module}_%{_src_ver}.zip
+Source0:	http://dl.sourceforge.net/pydev/%{_src_name}-%{_src_ver}.zip
 # Source0-md5:	963197aa44aa44e8c376546ff15b1a74
 URL:		http://pydev.sourceforge.net/
+BuildRequires:	rpm-pythonprov
 BuildRequires:	unzip
 Requires:	eclipse >= 3.1
 Requires:	python
@@ -34,8 +36,8 @@ unzip -qq %{SOURCE0} -x *.db
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_eclipsedir}/{features,plugins}
-cp -rf features/* $RPM_BUILD_ROOT%{_eclipsedir}/features
-cp -rf plugins/* $RPM_BUILD_ROOT%{_eclipsedir}/plugins
+cp -rf eclipse/features/* $RPM_BUILD_ROOT%{_eclipsedir}/features
+cp -rf eclipse/plugins/* $RPM_BUILD_ROOT%{_eclipsedir}/plugins
 
 %clean
 rm -rf $RPM_BUILD_ROOT
