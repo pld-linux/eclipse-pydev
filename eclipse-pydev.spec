@@ -10,7 +10,7 @@ Release:	1
 License:	CPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/pydev/%{_src_name}-%{_src_ver}.zip
-# Source0-md5:	963197aa44aa44e8c376546ff15b1a74
+# Source0-md5:	13d597fa567d9653dd6186def244e064
 URL:		http://pydev.sourceforge.net/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	unzip
