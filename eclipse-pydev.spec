@@ -47,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_eclipsedir}/features/org.python.pydev*
 %{_eclipsedir}/plugins/org.python.pydev*
 
-%triggerpostun -- %{name} > 0.9.5-0.3
+%triggerpostun -- %{name} < 0.9.5-0.3
 %banner %{name} -e << EOF
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                                                                !!!
