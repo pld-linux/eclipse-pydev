@@ -1,5 +1,5 @@
 %define		module	pydev
-%define		_ver	1.2.3
+%define		_ver	1.2.5
 %define		_src_name	org.python.pydev.feature
 %define		_src_ver	%(echo %{_ver}|tr . _)
 Summary:	Python development environment for Eclipse
@@ -10,7 +10,7 @@ Release:	1
 License:	CPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/pydev/%{_src_name}-%{_src_ver}.zip
-# Source0-md5:	49c92a1d508e6237bf8b6d5df2be1745
+# Source0-md5:	e2ca769825fa133dfc34c2a13bf1c06a
 URL:		http://pydev.sourceforge.net/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	unzip
