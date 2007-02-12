@@ -3,7 +3,7 @@
 %define		_src_name	org.python.pydev.feature
 %define		_src_ver	%(echo %{_ver}|tr . _)
 Summary:	Python development environment for Eclipse
-Summary(pl):	¦rodowisko programistyczne Pythona dla Eclipse
+Summary(pl.UTF-8):   Åšrodowisko programistyczne Pythona dla Eclipse
 Name:		eclipse-%{module}
 Version:	%{_ver}
 Release:	1
@@ -25,9 +25,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 PyDev is a plugin for Eclipse for editing, running and debugging 
 Python scripts.
 
-%description -l pl
-PyDev jest wtyczk± dla Eclipse s³u¿±c± do edycji, uruchamiania
-i odpluskwiania skryptów Pythona.
+%description -l pl.UTF-8
+PyDev jest wtyczkÄ… dla Eclipse sÅ‚uÅ¼Ä…cÄ… do edycji, uruchamiania
+i odpluskwiania skryptÃ³w Pythona.
 
 %prep
 %setup -q -c -T
