@@ -3,7 +3,7 @@
 %define		_src_name	org.python.pydev.feature
 %define		_src_ver	%(echo %{_ver}|tr . _)
 Summary:	Python development environment for Eclipse
-Summary(pl.UTF-8):   Środowisko programistyczne Pythona dla Eclipse
+Summary(pl.UTF-8):	Środowisko programistyczne Pythona dla Eclipse
 Name:		eclipse-%{module}
 Version:	%{_ver}
 Release:	1
