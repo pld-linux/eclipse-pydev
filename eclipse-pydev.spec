@@ -6,7 +6,7 @@ Summary:	Python development environment for Eclipse
 Summary(pl.UTF-8):	Środowisko programistyczne Pythona dla Eclipse
 Name:		eclipse-%{module}
 Version:	%{_ver}
-Release:	1
+Release:	2
 License:	CPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/pydev/%{_src_name}-%{_src_ver}.zip
